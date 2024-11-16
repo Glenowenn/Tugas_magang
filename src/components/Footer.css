@@ -1,0 +1,93 @@
+/* src/components/Footer.css */
+
+footer {
+  background-color: #0b488f; /* Dark blue background */
+  color: #ffffff; /* White text */
+  padding: 30px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+}
+
+/* Left Section (Logo and Copyright) */
+footer .container div:first-child {
+  text-align: center;
+}
+
+footer img {
+  width: 150px; /* Adjust logo size as needed */
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #d1d9e6; /* Slightly lighter white */
+}
+
+/* Center Section (Contact Us) */
+footer .container div:nth-child(2) {
+  text-align: center;
+}
+
+footer h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+footer .social-icons a {
+  font-size: 1.2rem;
+}
+
+/* Right Section (Available On) */
+footer .container div:last-child {
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 5px 0;
+}
+
+footer ul li a {
+  font-size: 0.9rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}

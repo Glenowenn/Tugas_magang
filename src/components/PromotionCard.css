@@ -1,0 +1,111 @@
+/* Main styling for promotion cards */
+.promotion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+  max-width: 250px;
+  margin: 10px auto; /* Centers cards on smaller screens */
+}
+
+.promotion-card:hover {
+  transform: scale(1.05);
+}
+
+.promotion-card h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #004080;
+  margin: 10px 0;
+}
+
+.promotion-card p {
+  font-size: 0.875rem;
+  color: #333;
+  margin: 5px 0;
+}
+
+.promotion-card .promotion-icon {
+  width: 80px; /* Adjusted for better scaling */
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.promotion-card.buy-2-get-1,
+.promotion-card.discount,
+.promotion-card.bundle-deal {
+  border: 2px solid #ffffff;
+  width: 100%;
+}
+
+/* Promotion Section styling */
+.promotion-section {
+  padding: 20px;
+  text-align: left;
+}
+
+.promotion-section h2 {
+  font-size: 1.8rem;
+  color: #004080;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.promotion-section h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #c72127;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+
+/* Promotion grid for responsive layout */
+.promotion-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Responsive styles for medium screens (tablets) */
+@media (min-width: 600px) {
+  .promotion-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    gap: 20px;
+  }
+
+  .promotion-card .promotion-icon {
+    width: 100px;
+    height: 80px;
+  }
+}
+
+/* Responsive styles for large screens (desktops) */
+@media (min-width: 900px) {
+  .promotion-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
+    gap: 30px;
+  }
+
+  .promotion-section h2 {
+    font-size: 2rem;
+  }
+
+  .promotion-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .promotion-card p {
+    font-size: 0.9rem;
+  }
+}

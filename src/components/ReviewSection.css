@@ -1,0 +1,52 @@
+
+
+.review-title {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    
+  }
+  
+  .review-title::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #c72127;
+    position: absolute;
+    left: 25%;
+    transform: translateX(-50%);
+    bottom: -5px;
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    border-radius: 12px;
+    min-width: 80%; /* Adjust this width as needed for responsiveness */
+  }
+  
+  .carousel-item p {
+    margin: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .carousel-item {
+      min-width: 50%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .carousel-item {
+      min-width: 30%;
+    }
+  }
+  

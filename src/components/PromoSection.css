@@ -1,0 +1,98 @@
+/* src/components/PromoSection.css */
+.promo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8d7da; /* Light pink background */
+  padding: 0; /* Menghilangkan padding di seluruh kontainer */
+}
+
+.promo-text {
+  flex: 1;
+  padding: 40px; /* Padding pada bagian teks */
+  color: #000000;
+}
+
+.promo-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #c72127;
+}
+
+.promo-text p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.hashtag {
+  color: #c72127;
+  font-weight: bold;
+}
+
+.order-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #004080;
+  background-color: #f8d7da;
+  border: 1px solid #004080;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #004080;
+  color: white;
+}
+
+.promo-image {
+  flex: 2; /* Mengatur gambar lebih mendominasi dengan nilai flex yang lebih besar */
+  display: flex;
+  justify-content: flex-start; /* Memastikan gambar berada di sebelah kiri */
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.promo-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .promo-section {
+    display: flex;
+    align-items: center;
+    background-color: #f8d7da; /* Light pink background */
+    padding: 0; /* Menghilangkan padding di kontainer utama */
+  }
+
+  .promo-text {
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .promo-image {
+    padding: 0; /* Tidak perlu padding di area gambar */
+  }
+
+  .promo-text h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #c72127;
+  }
+
+  .promo-text p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .order-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
